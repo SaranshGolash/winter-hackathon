@@ -242,3 +242,130 @@ footer > a {
 footer > div {
     font-weight: 700;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .box {
+        width: 80%; /* Adjust width for tablets */
+    }
+
+    h1 {
+        font-size: 80px; /* Reduce heading size for better fit */
+    }
+
+    .search-bar {
+        width: 160px; /* Slightly smaller search bar */
+    }
+
+    .navBar {
+        gap: 5px; /* Reduce gap between items */
+    }
+
+    .navBar h2 {
+        font-size: 18px; /* Adjust font size */
+        padding: 0px 5px; /* Reduce padding */
+    }
+
+    .headline {
+        width: 100%; /* Expand headline width */
+    }
+
+    .headline-animation {
+        animation: mymove 10s infinite; /* Adjust animation duration */
+    }
+
+    .sideBar-main-container {
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    .sideBar {
+        width: 100%; /* Expand width for better fit */
+    }
+
+    .information > h2 {
+        font-size: 2rem; /* Slightly smaller font size */
+    }
+
+    .img > img {
+        height: 140px;
+        width: 180px; /* Adjust image size */
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
+
+/* Mobile View (max-width: 767px) */
+@media screen and (max-width: 767px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .box {
+        width: 95%; /* Full width for mobile */
+        font-size: 16px; /* Smaller font size */
+    }
+
+    h1 {
+        font-size: 50px; /* Reduce heading size for mobile */
+    }
+
+    .topBar {
+        flex-direction: column; /* Stack top bar content vertically */
+        align-items: center;
+        padding: 10px;
+    }
+
+    .search-bar {
+        width: 140px; /* Smaller search bar */
+    }
+
+    .navBar {
+        flex-direction: column; /* Stack navigation links */
+        gap: 5px;
+    }
+
+    .navBar h2 {
+        font-size: 16px; /* Smaller font size */
+        padding: 5px;
+        border-right: none; /* Remove border for cleaner mobile view */
+    }
+
+    .headline {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .headline-animation {
+        animation: mymove 8s infinite; /* Adjust animation duration */
+    }
+
+    .sideBar-main-container {
+        flex-direction: column; /* Stack sidebar content */
+        gap: 10px;
+    }
+
+    .sideBar {
+        width: 100%; /* Full width for mobile */
+    }
+
+    .information > h2 {
+        font-size: 1.8rem; /* Adjust title font size */
+    }
+
+    .img > img {
+        height: 120px;
+        width: 160px; /* Reduce image size */
+    }
+
+    footer {
+        flex-direction: column; /* Stack footer content */
+        text-align: center;
+    }
+}
