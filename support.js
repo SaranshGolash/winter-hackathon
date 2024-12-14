@@ -27,7 +27,7 @@ document.getElementById("searchButton").addEventListener("click", function () {
         window.location.href = targetPage;
     } else {
         // Show an alert or handle invalid input
-        alert("Page not found. Please enter a valid search term.");
+        window.location.href = "404.html";
     }
 });
 
