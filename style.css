@@ -135,7 +135,6 @@ h3 {
     justify-content: center;
     align-items: center;
     width: 620px;
-    padding: 0px 10px 0px 50px;
     color: black;
     border-left: black solid 3px;
     overflow: hidden; /* Prevent overflow if the animation exceeds the parent width */
