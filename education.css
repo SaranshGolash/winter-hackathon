@@ -1,0 +1,231 @@
+body {
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    margin: 0;
+    background-color: #f0f0f0;
+    padding-top: 40px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    height: fit-content;
+    width: 100%;
+    background-color: black;
+    color: aliceblue;
+}
+
+#apple-logo {
+    width: 210px;
+    height: auto;
+}
+
+h1 {
+    font-size: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.topBar > div {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.topBar button {
+    width: 40px;
+    height: 40px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.topBar button:hover {
+    background-color: #45a049;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.topBar button:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.8); 
+}
+
+.search-bar {
+    width: 200px; 
+    height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-bar:focus,
+.search-bar:hover {
+    border-color: #5f6e6092;
+    opacity: 0.9;
+}
+.navBar {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    background-color: #b1b0b0e7;
+    padding: 0;
+}
+
+.navBar h2 {
+    font-size: 21px;
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+    padding: 0px 10px 0px 10px;
+    border-right-style: solid;
+}
+
+h2 > a {
+    color: black;
+    text-decoration: none;
+}
+
+h2 > a:hover {
+    text-decoration: underline;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#support {
+    border-style: none;
+}
+
+.hotNews {
+    display: flex;
+    justify-content: left;
+    border: black solid 3px;
+    border-style: outset;
+    width: fit-content;
+    padding: 0px 17px 0px 10px;
+    background-color: rgb(209, 196, 178);
+    color: rgb(255, 254, 254);
+}
+
+h3 {
+    padding: 0px 20px 0px 20px;
+    font-size: 28px;
+}
+
+.headline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 620px;
+    padding: 0px 10px 0px 50px;
+    color: black;
+    border-left: black solid 3px;
+    overflow: hidden; /* Prevent overflow if the animation exceeds the parent width */
+    position: relative; /* Make the headline container the reference point */
+}
+
+.headline > div {
+    display: flex;
+    position: relative; /* Enable animation for the child element */
+}
+
+.headline-animation {
+    position: relative; /* Allow movement relative to its current position */
+    animation: mymove 12s infinite; /* Animate continuously */
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes mymove {
+    from {
+        transform: translateX(-570px); /* Start position */
+    }
+    to {
+        transform: translateX(570px); /* Move 300px to the right */
+    }
+}
+
+
+h4{
+    padding-right: 40px;
+    font-size: 16px;
+}
+
+.sideBar-main-container {
+    display: flex;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.sideBar {
+    background-color: #b1b0b0e7;
+    width: fit-content;
+}
+
+.sideBar > h5 {
+    text-align: start;
+    cursor: pointer;
+}
+
+.listing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+.information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.information > h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.information > p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+footer > a {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+footer > div {
+    font-weight: 700;
+}
