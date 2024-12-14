@@ -24,6 +24,7 @@ body {
     width: 100%;
     background-color: black;
     color: aliceblue;
+    padding: 10px;
 }
 
 #apple-logo {
@@ -82,6 +83,7 @@ h1 {
     border-color: #5f6e6092;
     opacity: 0.9;
 }
+
 .navBar {
     display: flex;
     gap: 10px;
@@ -137,33 +139,32 @@ h3 {
     width: 650px;
     color: black;
     border-left: black solid 3px;
-    overflow: hidden; /* Prevent overflow if the animation exceeds the parent width */
-    position: relative; /* Make the headline container the reference point */
+    overflow: hidden;
+    position: relative;
 }
 
 .headline > div {
     display: flex;
-    position: relative; /* Enable animation for the child element */
+    position: relative;
 }
 
 .headline-animation {
-    position: relative; /* Allow movement relative to its current position */
-    animation: mymove 12s infinite; /* Animate continuously */
+    position: relative;
+    animation: mymove 12s infinite;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
 }
 
 @keyframes mymove {
     from {
-        transform: translateX(-570px); /* Start position */
+        transform: translateX(-570px);
     }
     to {
-        transform: translateX(570px); /* Move 300px to the right */
+        transform: translateX(570px);
     }
 }
 
-
-h4{
+h4 {
     padding-right: 40px;
     font-size: 16px;
 }
@@ -241,67 +242,70 @@ footer > div {
     font-weight: 700;
 }
 
+/* Tablet View (768px to 1024px) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     body {
-        flex-direction: column;
         padding: 20px;
     }
 
     .box {
-        width: 80%; /* Adjust width for tablets */
+        width: 90%; /* More responsive width */
+        margin: 0 auto; /* Center the box */
+    }
+
+    .topBar {
+        flex-wrap: wrap; /* Allow items to wrap */
+        justify-content: center;
+        gap: 15px;
     }
 
     h1 {
-        font-size: 80px; /* Reduce heading size for better fit */
+        font-size: 70px; /* More proportional size */
     }
 
     .search-bar {
-        width: 160px; /* Slightly smaller search bar */
+        width: 180px; /* Slightly wider search bar */
     }
 
     .navBar {
-        gap: 5px; /* Reduce gap between items */
+        flex-wrap: wrap; /* Allow navigation to wrap */
+        justify-content: center;
     }
 
     .navBar h2 {
-        font-size: 18px; /* Adjust font size */
-        padding: 0px 5px; /* Reduce padding */
+        font-size: 19px;
+        padding: 5px 10px;
     }
 
     .headline {
-        width: fit-content; /* Expand headline width */
+        max-width: 100%;
+        padding: 5px;
     }
 
     .headline-animation {
-        animation: mymove 10s infinite; /* Adjust animation duration */
+        animation: mymove 10s linear infinite;
     }
 
     .sideBar-main-container {
-        flex-direction: column; /* Stack content vertically */
-    }
-
-    .sideBar {
-        width: 100%; /* Expand width for better fit */
+        flex-direction: column;
+        align-items: center;
     }
 
     .information > h2 {
-        font-size: 2rem; /* Slightly smaller font size */
+        font-size: 2.2rem;
     }
 
     .img > img {
-        height: 140px;
-        width: 180px; /* Adjust image size */
-    }
-
-    footer {
-        padding: 15px;
+        height: 130px;
+        width: 190px;
     }
 }
 
 /* Mobile View (max-width: 767px) */
 @media screen and (max-width: 767px) {
+
     body {
-        padding: 0;
+        padding: none;
     }
 
     .box {
@@ -340,7 +344,7 @@ footer > div {
     }
     
     .hotNews {
-        width: 420px;
+        width: 380px;
     }
 
     .headline {
