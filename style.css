@@ -342,32 +342,35 @@ footer > div {
     }
     
     .hotNews {
-        width: 460px;
+        width: 360px;
     }
 
     .headline {
         max-width: 100%;
         padding: 5px;
-        border-left: none;
+        border-left: black solid;
+        border-left-style: outset;
     }
 
     .headline-animation {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        gap: 10px;
+        gap: 18px;
         animation: mymove 8s linear infinite;
     }
 
     @keyframes mymove {
         from {
-            transform: translateX(-270px);
+            transform: translateX(-170px);
         }
         to {
-            transform: translateX(270px);
+            transform: translateX(170px);
         }
     }
 
-    .headline h4 {
+    .headline-animation h4 {
+        font-size: 10px;
+        font-weight: bolder;
         text-align: center;
         padding: 0;
     }
@@ -393,7 +396,7 @@ footer > div {
 
     footer {
         flex-direction: row;
-        gap: 5px;
+        gap: 3px;
     }
 
     footer > a, 
