@@ -121,7 +121,6 @@ h2 > a:hover {
     border: black solid 3px;
     border-style: outset;
     width: fit-content;
-    padding: 0px 17px 0px 10px;
     background-color: rgb(209, 196, 178);
     color: rgb(255, 254, 254);
 }
