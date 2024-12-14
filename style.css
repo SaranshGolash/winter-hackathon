@@ -271,7 +271,7 @@ footer > div {
     }
 
     .headline {
-        width: 100%; /* Expand headline width */
+        width: fit-content; /* Expand headline width */
     }
 
     .headline-animation {
@@ -338,7 +338,7 @@ footer > div {
     }
 
     .headline {
-        width: 100%;
+        width: fit-content;
         padding: 10px;
     }
 
