@@ -301,7 +301,7 @@ footer > div {
 /* Mobile View (max-width: 767px) */
 @media screen and (max-width: 767px) {
     body {
-        padding: none;
+        padding: 0;
     }
 
     .box {
@@ -340,7 +340,7 @@ footer > div {
     }
     
     .hotNews {
-        width: 380px;
+        width: 420px;
     }
 
     .headline {
