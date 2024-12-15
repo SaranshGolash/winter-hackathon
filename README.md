@@ -1,4 +1,4 @@
-# Winter-Hackathon
+# Holiday-Hackathon
 
 <h1><b>Theme-Title:</b> Apple Website all the way back to 90's</h1>
 
