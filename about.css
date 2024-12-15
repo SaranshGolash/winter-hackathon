@@ -129,14 +129,14 @@ h2 > a:hover {
 
 h3 {
     padding: 0px 20px 0px 20px;
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .headline {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 650px;
+    width: 690px;
     color: black;
     border-left: black solid 3px;
     overflow: hidden;
