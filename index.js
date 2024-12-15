@@ -1,7 +1,17 @@
 document.getElementById("searchButton").addEventListener("click", function () {
+    handleSearch();
+});
+
+document.getElementById("searchBar").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        handleSearch();
+    }
+});
+
+function handleSearch() {
     const userInput = document.getElementById("searchBar").value.trim();
 
-    // Define a mapping of possible user inputs to corresponding URLs
+    // mapping user input and url
     const pageMapping = {
         "home": "index.html",
         "about": "about.html",
@@ -27,14 +37,13 @@ document.getElementById("searchButton").addEventListener("click", function () {
         "register": "signup.html"
     };
 
-    // Check if the input matches a defined page
     const targetPage = pageMapping[userInput.toLowerCase()]; // Convert input to lowercase for case-insensitive match
 
     if (targetPage) {
         // Navigate to the target page
         window.location.href = targetPage;
     } else {
-        // Show an alert or handle invalid input
+        // invalid
         window.location.href = "404.html";
     }
-});
+}
