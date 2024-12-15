@@ -136,7 +136,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 650px;
+    width: 690px;
     color: black;
     border-left: black solid 3px;
     overflow: hidden;
@@ -242,66 +242,7 @@ footer > div {
     font-weight: 700;
 }
 
-/* Tablet View (768px to 1024px) */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    body {
-        padding: 20px;
-    }
-
-    .box {
-        width: 90%; /* More responsive width */
-        margin: 0 auto; /* Center the box */
-    }
-
-    .topBar {
-        flex-wrap: wrap; /* Allow items to wrap */
-        justify-content: center;
-        gap: 15px;
-    }
-
-    h1 {
-        font-size: 70px; /* More proportional size */
-    }
-
-    .search-bar {
-        width: 180px; /* Slightly wider search bar */
-    }
-
-    .navBar {
-        flex-wrap: wrap; /* Allow navigation to wrap */
-        justify-content: center;
-    }
-
-    .navBar h2 {
-        font-size: 19px;
-        padding: 5px 10px;
-    }
-
-    .headline {
-        max-width: 100%;
-        padding: 5px;
-    }
-
-    .headline-animation {
-        animation: mymove 10s linear infinite;
-    }
-
-    .sideBar-main-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .information > h2 {
-        font-size: 2.2rem;
-    }
-
-    .img > img {
-        height: 130px;
-        width: 190px;
-    }
-}
-
-/* Mobile View (max-width: 767px) */
+/* Mobile View */
 @media screen and (max-width: 767px) {
 
     body {
