@@ -5,18 +5,26 @@ document.getElementById("searchButton").addEventListener("click", function () {
     const pageMapping = {
         "home": "index.html",
         "about": "about.html",
+        "about apple": "about.html",
         "products": "products.html",
         "where to buy": "wheretobuy.html",
+        "buy": "wheretobuy.html",
         "support": "support.html",
         "jobs": "jobs.html",
-        "contact": "contact.html",
+        "job": "jobs.html",
+        "jobs opportunity": "jobs.html",
+        "jobs opportunities": "jobs.html",
+        "job opportunity": "jobs.html",
+        "job opportunities": "jobs.html",
+        "contact": "support.html",
         "education": "education.html",
         "sign in": "signin.html",
         "sign up": "signup.html",
         "privacy notice": "privacy.html",
         "privacy policy": "privacy.html",
         "privacy": "privacy.html",
-        "login": "signin.html"
+        "login": "signin.html",
+        "register": "signup.html"
     };
 
     // Check if the input matches a defined page
