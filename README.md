@@ -1,8 +1,8 @@
 # winter-hackathon
 
-<b>Theme-Title:</b> Apple Website all the way back to 90's
+<b>Theme-Title:</b> <h1>Apple Website all the way back to 90's</h1>
 
-<b>What if Apple company made their website retro mode?</b>
+<h2><b>What if Apple company made their website retro mode?</b></h2>
 
 This is my retro-styled website for Apple Company created using HTML, CSS and JavaScript. I used the existing apple products and images in the website as I wanted to give users the feel of the above question.
 
