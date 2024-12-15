@@ -24,6 +24,7 @@ body {
     width: 100%;
     background-color: black;
     color: aliceblue;
+    padding: 10px;
 }
 
 #apple-logo {
@@ -82,6 +83,7 @@ h1 {
     border-color: #5f6e6092;
     opacity: 0.9;
 }
+
 .navBar {
     display: flex;
     gap: 10px;
@@ -121,51 +123,48 @@ h2 > a:hover {
     border: black solid 3px;
     border-style: outset;
     width: fit-content;
-    padding: 0px 17px 0px 10px;
     background-color: rgb(209, 196, 178);
     color: rgb(255, 254, 254);
 }
 
 h3 {
     padding: 0px 20px 0px 20px;
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .headline {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 620px;
-    padding: 0px 10px 0px 50px;
+    width: 690px;
     color: black;
     border-left: black solid 3px;
-    overflow: hidden; /* Prevent overflow if the animation exceeds the parent width */
-    position: relative; /* Make the headline container the reference point */
+    overflow: hidden;
+    position: relative;
 }
 
 .headline > div {
     display: flex;
-    position: relative; /* Enable animation for the child element */
+    position: relative;
 }
 
 .headline-animation {
-    position: relative; /* Allow movement relative to its current position */
-    animation: mymove 12s infinite; /* Animate continuously */
+    position: relative;
+    animation: mymove 12s infinite;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
 }
 
 @keyframes mymove {
     from {
-        transform: translateX(-570px); /* Start position */
+        transform: translateX(-570px);
     }
     to {
-        transform: translateX(570px); /* Move 300px to the right */
+        transform: translateX(570px);
     }
 }
 
-
-h4{
+h4 {
     padding-right: 40px;
     font-size: 16px;
 }
@@ -193,6 +192,7 @@ h4{
     flex-wrap: wrap;
     gap: 4px;
 }
+
 .information {
     display: flex;
     flex-direction: column;
@@ -202,25 +202,27 @@ h4{
 }
 
 .information > h2 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 500;
     font-size: 2.5rem;
+}
+
+#tag {
+    font-size: 20px;
     padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.img > img {
+    cursor: pointer;
+    height: 150px;
+    width: 200px;
 }
 
 .information > p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 500;
     font-size: 18px;
-}
-
-.information > label {
-    padding-bottom: 10px;
-    padding-top: 20px;
-}
-
-.c1 {
-    padding-top: 30px;
 }
 
 footer {
@@ -238,4 +240,110 @@ footer > a {
 
 footer > div {
     font-weight: 700;
+}
+
+/* Mobile View */
+@media screen and (max-width: 767px) {
+
+    body {
+        padding: none;
+    }
+
+    .box {
+        width: 100%; /* Full width */
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .topBar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 40px; /* Smaller for mobile */
+    }
+
+    .search-bar {
+        width: 100%; /* Full width search bar */
+        max-width: 250px;
+    }
+
+    .navBar {
+        flex-direction: column;
+        align-items: stretch; /* Stretch items to full width */
+    }
+
+    .navBar h2 {
+        font-size: 16px;
+        text-align: center;
+        padding: 10px;
+        border-right: none;
+        border-bottom: 1px solid #888;
+    }
+    
+    .hotNews {
+        width: 380px;
+    }
+
+    .headline {
+        max-width: 100%;
+        padding: 5px;
+        border-left: black solid;
+        border-left-style: outset;
+    }
+
+    .headline-animation {
+        flex-direction: row;
+        align-items: center;
+        gap: 18px;
+        animation: mymove 8s linear infinite;
+    }
+
+    @keyframes mymove {
+        from {
+            transform: translateX(-170px);
+        }
+        to {
+            transform: translateX(170px);
+        }
+    }
+
+    .headline-animation h4 {
+        font-size: 10px;
+        font-weight: bolder;
+        text-align: center;
+        padding: 0;
+    }
+
+    .sideBar-main-container {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .information > h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .information > p {
+        font-size: 12px;
+    }
+
+    .img > img {
+        height: 100px;
+        width: 150px;
+    }
+
+    footer {
+        flex-direction: row;
+        gap: 3px;
+    }
+
+    footer > a, 
+    footer > div {
+        margin: 5px 0;
+    }
 }
