@@ -16,4 +16,5 @@ This is my retro-styled website for Apple Company created using HTML, CSS and Ja
 </ul>
 <b>Learning Experience:</b> As of now I am not sure if I should rate myself as an intermediate developer. My skills being beginner or intermediate, one thing is for sure I learned a lot of different features of HTML CSS and javaScript which was unknown to me in my journey of becoming a fully fledged full-stack developer. This hackathon really helped me brush of my skills.
 
+
 <b>Special Thanks:</b> A big thanks to <a href="https://www.codedex.io/home">@Codedex</a> for this amazing opportunity and for being such a great host to all of us.
