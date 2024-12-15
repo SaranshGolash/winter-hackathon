@@ -1,7 +1,17 @@
 document.getElementById("searchButton").addEventListener("click", function () {
+    handleSearch();
+});
+
+document.getElementById("searchBar").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        handleSearch();
+    }
+});
+
+function handleSearch() {
     const userInput = document.getElementById("searchBar").value.trim();
 
-    // Define a mapping of possible user inputs to corresponding URLs
+    // mapping user input and url
     const pageMapping = {
         "home": "index.html",
         "about": "about.html",
@@ -27,17 +37,16 @@ document.getElementById("searchButton").addEventListener("click", function () {
         "register": "signup.html"
     };
 
-    // Check if the input matches a defined page
     const targetPage = pageMapping[userInput.toLowerCase()]; // Convert input to lowercase for case-insensitive match
 
     if (targetPage) {
         // Navigate to the target page
         window.location.href = targetPage;
     } else {
-        // Show an alert or handle invalid input
+        // invalid
         window.location.href = "404.html";
     }
-});
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     const btnSearch = document.getElementById("btnSearch");
@@ -68,9 +77,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
+    // Predefined page mappings for navigation
+    const pageMapping = {
+        "reset password": "reset-password.html",
+        "contact support": "contact-support.html",
+        "applecare+": "applecare.html",
+        "update ios": "update-ios.html",
+        "device not turning on": "troubleshooting.html"
+    };
+
     // Function to handle the search
-    btnSearch.addEventListener("click", function () {
-        const query = searchInput.value.trim().toLowerCase(); // Get the user's input
+    function keySearch() {
+        const query = searchInput.value.trim().toLowerCase();
         faqResults.innerHTML = ""; // Clear previous results
 
         if (!query) {
@@ -79,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Filter FAQs based on the user's query
-        const matchingFaqs = faqs.filter(faq => 
+        const matchingFaqs = faqs.filter(faq =>
             faq.question.toLowerCase().includes(query)
         );
 
@@ -104,6 +122,22 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             // Display "no results found" message
             faqResults.innerHTML = "<p>No FAQs found matching your query. Try searching for something else.</p>";
+        }
+
+        // Check if there's a matching page and navigate if found
+        const targetPage = pageMapping[query];
+        if (targetPage) {
+            window.location.href = targetPage;
+        }
+    }
+
+    // Event listener for button click
+    btnSearch.addEventListener("click", keySearch);
+
+    // Event listener for "Enter" key
+    searchInput.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            keySearch();
         }
     });
 });
